@@ -6,16 +6,22 @@ import MovieBox from './Component/MovieBox';
 import MovieDetail from './Component/MovieDetail';
 
 class App extends Component {
-  state = {}
+  state = {
+    page : 1
+  }
   componentDidMount(){
     this.renderMovies();
-  }
-  componentDidUpdate(){
-    
   }
   renderMovies = async () => {
     const movieList = await this.callApi('https://yts.mx/api/v2/list_movies.json')
     this.setState({movieList : movieList.movies})
+    this.setPage(movieList);
+  }
+  setPage = (datas) => {
+    const count = datas.movie_count;
+    const limit = datas.limit;
+    const pages = Math.ceil(count/limit);
+    this.setState({pages});
   }
   callApi = (url) => {
     return fetch(url)
@@ -39,6 +45,7 @@ class App extends Component {
       movieList = await this.callApi(`https://yts.mx/api/v2/list_movies.json?sort_by=downlad_count`);
     }
     this.setState({movieList : movieList.movies});
+
   }
   render(){
     return(
@@ -48,6 +55,8 @@ class App extends Component {
           movieList={this.state.movieList}
           selectMovie={this.selectMovie}
           selectList={this.selectList}
+          page={this.state.page}
+          pages={this.state.pages}
         /> : <Loading/>}
         {this.state.display ? <MovieDetail display={this.state.display}/> : ""}
       </div>

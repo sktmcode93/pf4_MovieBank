@@ -2,15 +2,18 @@ import React from 'react';
 import './MovieBox.css';
 import MovieHeader from './MovieHeader';
 import Genres from './Genres';
+import Pages from './Pages';
 
 const MovieBox = (props) => {
     return(
         <div className="moviebox">
             <MovieHeader selectList={props.selectList}/>
             <div className="container">
+                <Pages pages={props.pages} page={props.page}/>
                 <div className="movie-main">
                     {drawList(props.movieList, props.selectMovie)}
                 </div>
+                <Pages pages={props.pages} page={props.page}/>
             </div>
         </div>
     )
