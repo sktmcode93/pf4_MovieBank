@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,500&display=swap');
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.mb-header-title{
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(255, 238, 238);
+}
+.mb-header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.mb-header ul li {
+    display: block;
+    color: rgb(255, 211, 211);
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.mb-header ul li:hover {
+    color: hsl(0, 50%, 20%);
+    background-color: rgb(255, 211, 211);
+}
+.movie-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.mb-movie{
+    width: 600px;
+    height: 400px;
+    margin: 50px 20px;
+    background-color: rgb(202, 202, 202);
+    display: flex;
+    font-display: row;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+.mb-movie-poster{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.mb-movie-poster img {
+    border : 10px solid rgb(37, 37, 37);
+    transition : border-color ease 0.2s;
+    display: block;
+}
+.mb-movie-poster img:hover{
+    cursor: pointer;
+    border-color: hsl(0, 50%, 20%);
+}
+.mb-movie-id{
+    display: none;
+}
+.mb-movie-info {
+    padding: 20px 30px;
+}
+.mb-movie-info h2 {
+    font-family: 'EB Garamond', serif;
+}
+.mb-movie-info span {
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin: 10px 0;
+}
+.mb-movie-info ul {
+    margin-top: 10px;
+    font-family: 'Exo', sans-serif;
+}
+.mb-movie-info ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.mb-movie-info p {
+    overflow: scroll;
+    height: 200px;
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+.mb-movie-info p::-webkit-scrollbar{
+    display: none;
+}
