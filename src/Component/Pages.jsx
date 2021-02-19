@@ -1,11 +1,16 @@
 import React from 'react';
+import "./Pages.css";
 
 const Pages = (props) => {
     return(
         <ul className="pages">
+            <li>&lt;&lt;</li>
+            <li>&lt;</li>
             {pNums(props.page)}        
+            <li>&gt;</li>
+            <li>&gt;&gt;</li>
         </ul>
-    )
+    );
 }
 const pNums = (num) => {
     let use = num;

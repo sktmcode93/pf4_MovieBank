@@ -53,6 +53,7 @@
     position: relative;
 }
 .mb-movie-poster img {
+    width: 200px;
     border : 10px solid rgb(37, 37, 37);
     transition : border-color ease 0.2s;
     display: block;
@@ -94,4 +95,117 @@
 }
 .mb-movie-info p::-webkit-scrollbar{
     display: none;
+}
+@media (max-width : 1280px){
+    .container{
+        max-width: 960px;
+    }
+    .mb-movie-info h2 {
+        font-size: 1.3rem;
+    }
+    .mb-movie {
+        width: 430px;
+        height: 350px;
+    }
+    .mb-movie-poster img {
+        width: 150px;
+    }
+    .mb-movie-info span {
+        margin: 5px 0;
+    }
+    .mb-movie-info {
+        padding: 20px;
+    }
+    .mb-movie-info p {
+        height: 150px;
+    }
+}
+@media(max-width : 960px){
+    .container{
+        max-width: 720px;
+    }
+    .mb-movie {
+        width: 300px;
+        height: 300px;
+    }
+    .mb-movie-poster img {
+        width: 100px;
+        margin-top: 40px;
+    }
+    .mb-movie-info {
+        padding: 10px;
+    }
+    .mb-movie-info h2 {
+        font-size: 1rem;
+    }
+    .mb-movie-info span {
+        font-size: 0.8rem;
+    }
+    .mb-movie-info p {
+        height: 110px;
+        font-size: 0.8rem;
+    }
+    .mb-movie-info ul {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width : 720px){
+    .container{
+        max-width: 480px;
+    }
+    .mb-movie {
+        width: 480px;
+        height: 400px;
+        margin: 25px 0;
+    }
+    .mb-movie-poster img {
+        width: 150px;
+        margin-top: 20px;
+    }
+    .mb-movie-info {
+        padding: 20px;
+    }
+    .mb-movie-info h2 {
+        font-size: 1.3rem;
+    }
+    .mb-movie-info span{
+        font-size: 1rem;
+    }
+    .mb-movie-info p{
+        height: 170px;
+        font-size: 1rem;
+    }
+    .mb-movie-info ul {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width : 480px){
+    .container{
+        max-width: 360px;
+    }
+    .mb-movie {
+        width: 360px;
+        height: 300px;
+        margin: 20px 0;
+    }
+    .mb-movie-poster img {
+        width: 100px;
+        margin-top: 40px;
+    }
+    .mb-movie-info {
+        padding: 10px 20px;
+    }
+    .mb-movie-info h2 {
+        font-size: 1.1rem;
+    }
+    .mb-movie-info span{
+        font-size: 0.9rem;
+    }
+    .mb-movie-info p{
+        height: 120px;
+        font-size: 0.9rem;
+    }
+    .mb-movie-info ul {
+        font-size: 0.8rem;
+    }
 }
