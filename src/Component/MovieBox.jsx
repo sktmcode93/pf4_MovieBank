@@ -9,11 +9,11 @@ const MovieBox = (props) => {
         <div className="moviebox">
             <MovieHeader selectList={props.selectList}/>
             <div className="container">
-                <Pages pages={props.pages} page={props.page}/>
+                <Pages paragraph={props.paragraph} selectPage={props.selectPage}/>
                 <div className="movie-main">
                     {drawList(props.movieList, props.selectMovie)}
                 </div>
-                <Pages pages={props.pages} page={props.page}/>
+                <Pages paragraph={props.paragraph} selectPage={props.selectPage}/>
             </div>
         </div>
     )
